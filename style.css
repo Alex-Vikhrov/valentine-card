@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    background-color: #ffc5ff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.envelope {
+    position: relative;
+    width: 200px;
+    height: 110px;
+    cursor: pointer;
+}
+
+.envelope_top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.7s;
+    transform: translateY(-100%);
+    transform-origin: bottom;
+}
+
+.paper {
+    width: 100px;
+    height: 80px;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    transform: translateY(-50px);
+    transition: 0.7s;
+    bottom: 0px;
+}
+
+.envelope_body {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+}
+
+.envelope_top_close {
+    transform: translateY(-110%) rotateX(180deg);
+    z-index: 2;
+}
+
+.paper_close {
+    transform: translateY(-10%);
+    height: 58px;
+}
+
+
+/*Сердце*/
+
+.paper:before,
+.paper:after {
+    content: "";
+    position: absolute;
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #EE4156;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.paper:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
